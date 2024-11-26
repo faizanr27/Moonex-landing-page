@@ -1,5 +1,6 @@
 import React, { useState } from "react"
-import { Plus, Minus } from 'lucide-react'
+import arrow from '../assets/arrow.png'
+import plus from '../assets/plus.png'
 
 const FaqSection = () => {
   const [openIndex, setOpenIndex] = useState(null)
@@ -20,11 +21,11 @@ const FaqSection = () => {
   ]
 
   return (
-    <div className="px-6 py-24 bg-gray-800/30 backdrop-blur-xl rounded-xl max-w-7xl w-[90%] mx-auto text-white mb-20">
-      <h2 className="text-4xl font-bold text-center mb-12">
+    <div className="px-6 p-8 bg-gray-800/30 backdrop-blur-xl rounded-xl max-w-7xl w-[90%] mx-auto text-white mb-20">
+      <h2 className="text-4xl font-bold text-center mb-2">
         <span className="text-yellow-400">FAQs</span>
       </h2>
-      <div className="max-w-3xl mx-auto space-y-4">
+      <div className="max-w-3xl mx-auto space-y-4 border-t border-gray-800">
         {faqs.map((faq, index) => (
           <div
             key={index}
@@ -36,9 +37,9 @@ const FaqSection = () => {
             >
               <span className="text-lg font-medium">{faq.question}</span>
               {openIndex === index ? (
-                <Minus className="w-6 h-6 text-gray-400" />
+                <img src={arrow}/>
               ) : (
-                <Plus className="w-6 h-6 text-gray-400" />
+                <img src={plus}/>
               )}
             </button>
             {openIndex === index && (

@@ -7,7 +7,7 @@ import  Footer  from "./components/Footer.jsx"
 
 const App = () => {
   return (
-    <div className='flex flex-col bg-gradient-to-br from-[#0a192f] via-[#0a1f2f] to-[#0a192f] overflow-x-hidden'>
+    <div className='flex flex-col bg-gradient-to-br from-[#0a192f] via-[#0a1f2f] to-[#0a192f] z-10'>
     <Navbar>
       <HeroSection />
       <ComparisonSection />

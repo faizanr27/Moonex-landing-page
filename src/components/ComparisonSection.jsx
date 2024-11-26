@@ -14,44 +14,42 @@ const ComparisonSection = () => {
   ]
 
   return (
-    <div className="px-6 py-24 overflow-hidden ">
+    <div className="px-6 py-24 overflow-hidden max-w-7xl mx-auto mt-20 xl:mt-40">
       <h2 className="text-4xl text-white font-bold text-center sm:text-left mb-12">
         Why <span className="text-yellow-400">MoonEX</span> ?
       </h2>
-      <div className="absolute sm:left-[680px] sm:top-[820px] left-16 top-[1260px] w-96 h-96 rounded-7xl bg-[#EDD955]/20 blur-3xl " />
-      <div className="mx-auto bg-gray-800/30 backdrop-blur-xl rounded-xl p-12 max-w-7xl ">
-        <div className="grid grid-cols-3 gap-4">
-          <div className="text-xl font-bold">
+      <div className="absolute lg:left-[580px] md:left-[350px] sm:left-[200px] sm:top-[1000px] left-16 top-[1300px] w-56 h-56 sm:w-96 sm:h-96 rounded-7xl bg-[#EDD955]/20 blur-3xl " />
+      <div className="sm:mx-auto bg-gray-800/30 backdrop-blur-xl rounded-xl p-4 sm:p-12 max-w-7xl ">
+        <div className="grid grid-cols-3 ">
+          <div className="text-xl font-bold border-r border-gray-800">
             <img
               alt="Moonex Logo"
-              className="h-8 mx-auto mb-2"
+              className="object-cover h-2 sm:h-4 xs:h-4 mx-auto mb-2"
               src={Comparison}
             />
             </div>
-          <div className="text-center">
+          <div className="text-center border-r border-gray-800">
             <img
               alt="Moonex Logo"
-              className="h-12 mx-auto mb-2"
+              className="sm:h-12 object-cover h-4 xs:h-8 mx-auto mb-2"
               src={Group10}
             />
-            {/* <span className="text-yellow-400 font-bold">Moonex</span> */}
           </div>
           <div className="text-center">
             <img
               alt="Uniswap Logo"
-              className="h-8 mx-auto mb-2"
+              className="sm:h-8 object-cover h-4 xs:h-8 mx-auto mb-2"
               src={uniswap}
             />
-            {/* <span className="text-pink-500 font-bold">UNISWAP</span> */}
           </div>
           {comparisonPoints.map((point, index) => (
             <React.Fragment key={`point-${index}`}>
-              <div className="py-4 border-t border-gray-800 text-gray-400">
+              <div className="py-4 border-t border-r border-gray-800 text-gray-400 text-xs xs:text-sm sm:text-lg">
                 <ol type='1'>
                   <li>{point}</li>
                 </ol>
               </div>
-              <div className="py-4 border-t border-gray-800 text-center">
+              <div className="py-4 border-t border-r border-gray-800 text-center">
                 <Check className="inline-block text-green-500" />
               </div>
               <div className="py-4 border-t border-gray-800 text-center">

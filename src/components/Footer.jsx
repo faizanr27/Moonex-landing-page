@@ -1,18 +1,21 @@
-import { TextIcon as Telegram, RssIcon as Reddit, Twitter } from "lucide-react";
+import tel from '../assets/tel.png'
+import reddit from '../assets/reddit.png'
+import Vector from '../assets/Vector.png'
+import moonex from '../assets/moonex.png'
+import contactus from '../assets/contactus.png'
 
 const Footer = () => {
   return (
     <footer className="bg-[#0a192f] text-white py-12 w-[]">
-      <div className="container mx-auto px-6">
+      <div className="container max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <img
-              src="/placeholder.svg?height=40&width=40"
+              src={moonex}
               alt="Moonex Logo"
-              className="h-10 w-10"
             />
           </div>
-          <nav className="flex flex-wrap justify-center md:justify-end gap-6 mb-6 md:mb-0">
+          <nav className="flex flex-wrap justify-center md:justify-end gap-6 mb-6 md:mb-0 font-bold">
             <a className="hover:text-yellow-400" to="#">
               About Us
             </a>
@@ -26,16 +29,21 @@ const Footer = () => {
               Contact Us
             </a>
           </nav>
-          <div className="flex gap-4">
+          <div className="flex flex-col items-center gap-4">
+            {/* <h1 className="font-bold font-2xl">Contact <span className="text-yellow-400">Us</span></h1> */}
+            <img src={contactus}/>
+            <div className="flex flex-row items-center gap-4">
             <a className="text-gray-400 hover:text-white" to="#">
-              <Telegram size={24} />
+              <img src={tel}/>
             </a>
             <a className="text-gray-400 hover:text-white" to="#">
-              <Reddit size={24} />
+              <img src={reddit}/>
             </a>
             <a className="text-gray-400 hover:text-white" to="#">
-              <Twitter size={24} />
+              <img src={Vector}/>
             </a>
+            </div>
+
           </div>
         </div>
       </div>
