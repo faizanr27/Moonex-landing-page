@@ -41,7 +41,7 @@ const Navbar = ({children}) => {
           className="absolute top-0 left-0 w-full h-full object-cover object-center"
         />
 
-      <div className={`${isScrolled && 'bg-gray-900/30 z-50 sticky top-0'}`}> 
+      <div className={`${isScrolled && 'bg-gray-900/70 z-50 sticky top-0'}`}> 
       <nav 
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
