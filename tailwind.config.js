@@ -59,7 +59,7 @@ theme: {
     }
   }
 },
-plugins: [require("tailwindcss-animate")],
+plugins: [animate],
 }
 
 
