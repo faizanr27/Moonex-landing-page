@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import arrow from '../assets/arrow.png'
 import plus from '../assets/plus.png'
-
+import { motion } from "motion/react"
 const FaqSection = () => {
   const [openIndex, setOpenIndex] = useState(null)
 
@@ -22,13 +22,16 @@ const FaqSection = () => {
 
   return (
     <div className="px-6 p-8 bg-gray-800/30 backdrop-blur-xl rounded-xl max-w-7xl w-[90%] mx-auto text-white mb-20">
-      <h2 className="text-4xl font-bold text-center mb-2">
+      <motion.h2 
+      initial={{opacity:0, y: 30}} whileInView={{opacity:1, y:0}} viewport={{once:true}} transition={{delay:0.2 ,duration:0.3}}
+      className="text-4xl font-bold text-center mb-2">
         <span className="text-yellow-400">FAQs</span>
-      </h2>
+      </motion.h2>
       <div className="max-w-3xl mx-auto space-y-4 border-t border-gray-800">
         {faqs.map((faq, index) => (
-          <div
+          <motion.div
             key={index}
+            initial={{opacity:0, y: 30}} whileInView={{opacity:1, y:0}} viewport={{once:true}} transition={{delay:0.3 * index ,duration:0.4}}
             className="border-b border-gray-800"
           >
             <button
@@ -45,7 +48,7 @@ const FaqSection = () => {
             {openIndex === index && (
               <div className="pb-6 text-gray-400">{faq.answer}</div>
             )}
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
